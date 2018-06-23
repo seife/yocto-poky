@@ -56,7 +56,7 @@ do_configure_prepend_darwin () {
 
 do_configure () {
 	cd util
-	perl perlpath.pl ${STAGING_BINDIR_NATIVE}
+	perl -I. perlpath.pl ${STAGING_BINDIR_NATIVE}
 	cd ..
 	ln -sf apps/openssl.pod crypto/crypto.pod ssl/ssl.pod doc/
 
