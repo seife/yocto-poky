@@ -68,6 +68,8 @@ ALLOW_EMPTY_${PN}_libc-musl = "1"
 
 BBCLASSEXTEND = "native nativesdk"
 
+CFLAGS_append = " -Wno-error "
+
 # Package utilities separately
 PACKAGES =+ "${PN}-binutils libelf libasm libdw"
 FILES_${PN}-binutils = "\
