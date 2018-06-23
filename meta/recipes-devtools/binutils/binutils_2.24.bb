@@ -10,6 +10,7 @@ EXTRA_OECONF += "--with-sysroot=/ \
                 "
 
 EXTRA_OECONF_class-native = "--enable-targets=all \
+                             --disable-werror \
                              --enable-64-bit-bfd \
                              --enable-install-libiberty \
                              --enable-install-libbfd"
