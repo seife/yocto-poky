@@ -1,0 +1,13 @@
+Index: b/doc/scripts/sort2.pl
+===================================================================
+--- a/doc/scripts/sort2.pl
++++ b/doc/scripts/sort2.pl
+@@ -11,7 +11,7 @@ sub key_of_record {
+ 
+   while( !($key =~ /^\@deftypefun/) && ($i < 5)) { $i=$i+1; $key = $lines[$i]; }
+ 
+-  $key = $1 if $key =~ /^\@deftypefun {.*} {(.*)}/;
++  $key = $1 if $key =~ /^\@deftypefun \{.*} \{(.*)}/;
+ 
+ #  print STDERR "key $1\n";
+ 

@@ -10,6 +10,7 @@ SRC_URI += "file://gnutls-openssl.patch \
             file://CVE-2014-0092-corrected-return-codes.patch \
             file://CVE-2014-3466.patch \
             file://25_updatedgdocfrommaster.diff \
+            file://gnutls-new-perl.patch \
             ${@['', 'file://fix-gettext-version.patch'][bb.data.inherits_class('native', d) or (not ((d.getVar("INCOMPATIBLE_LICENSE", True) or "").find("GPLv3") != -1))]} \
            "
 
