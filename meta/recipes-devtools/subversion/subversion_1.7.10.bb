@@ -37,6 +37,8 @@ export LDFLAGS += " -L${STAGING_LIBDIR} "
 
 acpaths = "-I build/ -I build/ac-macros/"
 
+CPPFLAGS_append = " -P "
+
 do_configure_prepend () {
 	rm -f ${S}/libtool
 	rm -f ${S}/build/libtool.m4 ${S}/build/ltmain.sh ${S}/build/ltoptions.m4 ${S}/build/ltsugar.m4 ${S}/build/ltversion.m4 ${S}/build/lt~obsolete.m4
