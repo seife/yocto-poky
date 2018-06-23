@@ -1,0 +1,13 @@
+Index: b/configure.ac
+===================================================================
+--- a/configure.ac
++++ b/configure.ac
+@@ -67,7 +67,7 @@ AC_C_CONST
+ mfx_LZO_CHECK_ENDIAN
+ AC_SYS_LARGEFILE
+ 
+-AM_INIT_AUTOMAKE([1.14.1 gnu subdir-objects])
++AM_INIT_AUTOMAKE([1.14 gnu subdir-objects])
+ AM_SILENT_RULES([yes])
+ AC_CONFIG_HEADERS([config.h:config.hin])
+ 
