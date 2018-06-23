@@ -18,6 +18,7 @@ SRC_URI[md5sum] = "8f0eb41a344d19ac2aa9bd101dfb9ce6"
 SRC_URI[sha256sum] = "cafc9ed6a87c53a35175d5a1220a96ca386696eef2fa059cc0306211f246e55f"
 
 inherit autotools binconfig pkgconfig gettext
+CPPFLAGS_append = " -P "
 
 FILES_${PN}-dev += "${bindir}/gpg-error"
 
