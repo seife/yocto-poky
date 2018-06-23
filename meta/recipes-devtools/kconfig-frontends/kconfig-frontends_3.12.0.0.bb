@@ -11,7 +11,7 @@ HOMEPAGE = "http://ymorin.is-a-geek.org/projects/kconfig-frontends"
 LICENSE = "GPL-2.0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=9b8cf60ff39767ff04b671fca8302408"
 SECTION = "devel"
-DEPENDS += "ncurses flex bison gperf-native pkgconfig-native"
+DEPENDS += "flex bison gperf-native pkgconfig-native"
 RDEPENDS_${PN} += "python"
 SRC_URI = "http://ymorin.is-a-geek.org/download/${BPN}/${BP}.tar.xz"
 
@@ -30,7 +30,7 @@ do_install_append() {
 	ln -s kconfig-mconf ${D}${bindir}/mconf
 }
 
-EXTRA_OECONF += "--disable-gconf --disable-qconf"
+EXTRA_OECONF += "--disable-gconf --disable-qconf --disable-nconf"
 
 # Some packages have the version preceeding the .so instead properly
 # versioned .so.<version>, so we need to reorder and repackage.
