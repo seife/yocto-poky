@@ -1,0 +1,20 @@
+Index: b/locale/xlocale.h
+===================================================================
+--- a/locale/xlocale.h
++++ b/locale/xlocale.h
+@@ -19,6 +19,7 @@
+ 
+ #ifndef _XLOCALE_H
+ #define _XLOCALE_H	1
++#if 0
+ 
+ /* Structure for reentrant locale using functions.  This is an
+    (almost) opaque type for the user level programs.  The file and
+@@ -40,5 +41,7 @@ typedef struct __locale_struct
+ 
+ /* POSIX 2008 makes locale_t official.  */
+ typedef __locale_t locale_t;
++#endif
++typedef struct __locale_struct *__locale_t;
+ 
+ #endif /* xlocale.h */

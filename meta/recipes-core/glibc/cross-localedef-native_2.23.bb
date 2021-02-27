@@ -25,6 +25,7 @@ UPSTREAM_CHECK_GITTAGREGEX = "(?P<pver>\d+\.\d+(\.\d+)*)"
 SRC_URI = "${GLIBC_GIT_URI};branch=${SRCBRANCH};name=glibc \
            git://github.com/kraj/localedef;branch=master;name=localedef;destsuffix=git/localedef \
            file://fix_for_centos_5.8.patch \
+           file://cross-localedef-native-localefix.patch \
            ${EGLIBCPATCHES} \
 "
 EGLIBCPATCHES = "\
